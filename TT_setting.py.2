@@ -1,0 +1,76 @@
+# -*- coding utf-8 -*-
+__author__ = 'xiaxichen'
+
+# 搜索关键词提取用户列表
+CONCURRENT_REQUESTS_PROFILES = 5
+# 搜文章提用户
+CONCURRENT_REQUESTS_PROFILES_LIST = 5
+# 文章列表， 用户发文历史
+CONCURRENT_REQUESTS_ARTICLE = 30
+# 采集文章
+CONCURRENT_REQUESTS_ARTICLE_HTML = 5
+# 采集评论
+CONCURRENT_REQUESTS_COMMENT = 2
+# 
+CONCURRENT_REQUESTS_LOST = 1
+CONCURRENT_PRIORITY_ARTICLE = 1
+CONCURRENT_REQUESTS_PROFILES_PROFILE = 1
+MYSQL_HOST = ""
+MYSQL_DBNAME = ""
+MYSQL_USER = ""
+MYSQL_PASSWORD = ""
+MYSQL_CHARSET = 'utf8mb4'
+BETWEEN_TIME = 3600*24
+ARTICLE_BETWEEN_TIME = 3600*24*2
+COMMENT_BETWEEN_TIME = 3600*24*2
+MYSQL_SAVE_TIME = 3600*24*30
+TIME_OUT = 15
+RETRY_NUM = 3
+HEADERS_PROFILESLIST = {
+    'Host': 'www.toutiao.com',
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv64.0) Gecko/20100101 Firefox/64.0',
+    'Accept': 'application/json, text/javascript',
+    'Accept-Language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Referer': 'https://www.toutiao.com/search/?keyword=%E7%81%AB%E7%AE%AD',
+    'X-Requested-With': 'XMLHttpRequest',
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Connection': 'Close'}
+HEADERS_ARTICLE_LIST = {
+    'Accept-Encoding': 'gzip',
+    'sdk-version': '1',
+    'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 5.1.1; xiaomi 6 Build/LYZ28N) NewsArticle/7.0.5 okhttp/3.10.0.2',
+    'X-Gorgon': '',
+    'X-Pods': '',
+    'Host': 'lf.snssdk.com',
+    'Connection': 'Keep-Alive'}
+HEADERS_ARTICLE = {
+    'Host': 'lf.snssdk.com',
+    'Connection': 'Close',
+    'Accept-Encoding': 'gzip',
+    'sdk-version': '1',
+    'X-SS-REQ-TICKET': '',
+    'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 5.1.1; a31 Build/LYZ28N) NewsArticle/6.5.1 cronet/58.0.2991.0'
+}
+HEADERS_PROFILE_LIST = {
+    'Host': 'lf.snssdk.com',
+    'Connection': 'keep-alive',
+    'Accept': 'text/javascript, text/html, application/xml, text/xml, */*',
+    'X-Requested-With': 'XMLHttpRequest',
+    'User-Agent': 'Mozilla/5.0 (Linux; Android 5.1.1; xiaomi 6 Build/LYZ28N) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/39.0.0.0 Mobile Safari/537.36 JsSdk/2 NewsArticle/7.0.5 NetType/wifi',
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Accept-Encoding': 'gzip, deflate',
+    'Accept-Language': 'zh-CN,en-US;q=0.8'
+}
+
+HEADERS_COMMENT = {
+    "Host": "lf.snssdk.com",
+    "Connection": "Close",
+    "Accept-Encoding": "gzip",
+    "sdk-version": "1",
+    "X-SS-REQ-TICKET": "",
+    "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 5.1.1; a31 Build/LYZ28N) NewsArticle/6.5.1 cronet/58.0.2991.0",
+}
+
+PROXY_URL = ""
+PROXY_URL_OWNERSHIP = ""
